@@ -1,0 +1,127 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+section{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:#778da9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    overflow: hidden;
+    height: 100vh;
+}
+/* tools-container */
+.tools-container{
+    padding: 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.tools-container div{
+    margin-top: 15px;
+}
+.word-box{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.word-box div{
+    margin: 5px;
+    width: 30px;
+    height: 5px;
+    background-color: black;
+    font-size:23px;
+    font-weight: 700;
+}
+.hint-box{
+    padding: 12px;
+    width: 100%;
+}
+.hint-box p{
+    font-weight: 700;
+    cursor: pointer;
+    filter: blur(3px);
+    transition: .3s;
+}
+.btns-box{
+    display: grid;
+    grid-template-columns: repeat(9 , 1fr);
+    justify-content: center;
+    padding: 12px;
+    width: 100%;
+}
+.btns-box button{
+    margin: 5px;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+    transition: .3s;
+    background-color: #e0e1dd;
+}
+.btns-box button:active{
+    background-color: gold;
+}
+.btns-box button[disabled]:active{
+    background-color:#e0e1dd;
+}
+
+.image-container{
+    display: flex;
+    justify-content: center;
+}
+
+/* win-section , loser-section*/
+.win-section , .loser-section{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.406);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.win-section button , .loser-section button{
+    width: 90%;
+    padding: 30px;
+    font-size: 23px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 700;
+    margin-top: 112px;
+}
+
+/* @media */
+@media screen and (max-width:400px) {
+    .btns-box{
+        margin-bottom: 30px;
+        margin-left: 5px;
+    }
+    .btns-box button{
+        border-radius: 3px;
+    }
+    .image-container img{
+        width: 200px;
+        height: 200px;
+    }
+}
+@media screen and (max-width:992px ) {
+    .btns-box{
+        margin-top: 30px;
+    }
+    .btns-box button{
+        border-radius: 3px;
+        padding: 7px;
+    }
+}
